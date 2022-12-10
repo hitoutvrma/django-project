@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMAP</title>
+   
+</head>
+
+<body>
+    <h1 align='center'>This is KMAP Page.</h1><br>
+    
+    <form method="POST" align='center'>
+        <label>Enter min terms here :</label><br>
+    {% csrf_token %}
+    <input type="text" name="min-terms"><br>
+    <label>Enter don't cares here:</label><br>
+    <input type="text" name="dont-cares"><br>
+    <button type="submit">Calculate</button><br>
+    <label>Output</label><br>
+    <input type="text" value="{{kmap}}" name="kmap" class="form-control"/><br>
+    </form>
+</body>
+</html>
